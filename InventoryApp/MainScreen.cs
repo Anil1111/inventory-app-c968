@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace InventoryApp
 {
-    public partial class Form1 : Form
+    public partial class MainScreen : Form
     {
-        public Form1()
+        public MainScreen()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void partAdd_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Add in the Parts section was clicked");
         }
     }
 }
