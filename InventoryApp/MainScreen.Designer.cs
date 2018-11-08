@@ -61,6 +61,7 @@
             // 
             // partModify
             // 
+            this.partModify.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.partModify.Location = new System.Drawing.Point(139, 293);
             this.partModify.Name = "partModify";
             this.partModify.Size = new System.Drawing.Size(105, 43);
@@ -70,6 +71,7 @@
             // 
             // partDelete
             // 
+            this.partDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.partDelete.Location = new System.Drawing.Point(260, 293);
             this.partDelete.Name = "partDelete";
             this.partDelete.Size = new System.Drawing.Size(105, 43);
@@ -88,12 +90,14 @@
             // 
             // button9
             // 
+            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button9.Location = new System.Drawing.Point(712, 456);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(106, 39);
             this.button9.TabIndex = 8;
             this.button9.Text = "Exit";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // textBox1
             // 
@@ -178,6 +182,7 @@
             // 
             // productAdd
             // 
+            this.productAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productAdd.Location = new System.Drawing.Point(21, 293);
             this.productAdd.Name = "productAdd";
             this.productAdd.Size = new System.Drawing.Size(105, 43);
@@ -187,6 +192,7 @@
             // 
             // productModify
             // 
+            this.productModify.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.productModify.Location = new System.Drawing.Point(139, 293);
             this.productModify.Name = "productModify";
             this.productModify.Size = new System.Drawing.Size(105, 43);
@@ -196,6 +202,7 @@
             // 
             // productDelete
             // 
+            this.productDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.productDelete.Location = new System.Drawing.Point(260, 293);
             this.productDelete.Name = "productDelete";
             this.productDelete.Size = new System.Drawing.Size(105, 43);

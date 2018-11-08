@@ -18,5 +18,10 @@ namespace InventoryApp
         }
 
         private void partAdd_Click(object sender, EventArgs e) => MessageBox.Show("Add in the Parts section was clicked");
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
