@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.partAdd = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.partModify = new System.Windows.Forms.Button();
+            this.partDelete = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.productAdd = new System.Windows.Forms.Button();
+            this.productModify = new System.Windows.Forms.Button();
+            this.productDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -59,23 +59,23 @@
             this.partAdd.UseVisualStyleBackColor = true;
             this.partAdd.Click += new System.EventHandler(this.partAdd_Click);
             // 
-            // button2
+            // partModify
             // 
-            this.button2.Location = new System.Drawing.Point(139, 293);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 43);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Modify";
-            this.button2.UseVisualStyleBackColor = true;
+            this.partModify.Location = new System.Drawing.Point(139, 293);
+            this.partModify.Name = "partModify";
+            this.partModify.Size = new System.Drawing.Size(105, 43);
+            this.partModify.TabIndex = 1;
+            this.partModify.Text = "Modify";
+            this.partModify.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // partDelete
             // 
-            this.button3.Location = new System.Drawing.Point(260, 293);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 43);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.partDelete.Location = new System.Drawing.Point(260, 293);
+            this.partDelete.Name = "partDelete";
+            this.partDelete.Size = new System.Drawing.Size(105, 43);
+            this.partDelete.TabIndex = 2;
+            this.partDelete.Text = "Delete";
+            this.partDelete.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -109,12 +109,27 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.partAdd);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.partModify);
+            this.panel1.Controls.Add(this.partDelete);
             this.panel1.Location = new System.Drawing.Point(15, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(383, 365);
             this.panel1.TabIndex = 11;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 65);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(344, 222);
+            this.tableLayoutPanel1.TabIndex = 10;
             // 
             // panel2
             // 
@@ -122,13 +137,28 @@
             this.panel2.Controls.Add(this.tableLayoutPanel2);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.productAdd);
+            this.panel2.Controls.Add(this.productModify);
+            this.panel2.Controls.Add(this.productDelete);
             this.panel2.Location = new System.Drawing.Point(434, 60);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(383, 365);
             this.panel2.TabIndex = 12;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(21, 65);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(344, 222);
+            this.tableLayoutPanel2.TabIndex = 11;
             // 
             // button5
             // 
@@ -146,32 +176,32 @@
             this.textBox2.Size = new System.Drawing.Size(249, 23);
             this.textBox2.TabIndex = 9;
             // 
-            // button6
+            // productAdd
             // 
-            this.button6.Location = new System.Drawing.Point(21, 293);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(105, 43);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Add";
-            this.button6.UseVisualStyleBackColor = true;
+            this.productAdd.Location = new System.Drawing.Point(21, 293);
+            this.productAdd.Name = "productAdd";
+            this.productAdd.Size = new System.Drawing.Size(105, 43);
+            this.productAdd.TabIndex = 0;
+            this.productAdd.Text = "Add";
+            this.productAdd.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // productModify
             // 
-            this.button7.Location = new System.Drawing.Point(139, 293);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(105, 43);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Modify";
-            this.button7.UseVisualStyleBackColor = true;
+            this.productModify.Location = new System.Drawing.Point(139, 293);
+            this.productModify.Name = "productModify";
+            this.productModify.Size = new System.Drawing.Size(105, 43);
+            this.productModify.TabIndex = 1;
+            this.productModify.Text = "Modify";
+            this.productModify.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // productDelete
             // 
-            this.button8.Location = new System.Drawing.Point(260, 293);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(105, 43);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Delete";
-            this.button8.UseVisualStyleBackColor = true;
+            this.productDelete.Location = new System.Drawing.Point(260, 293);
+            this.productDelete.Name = "productDelete";
+            this.productDelete.Size = new System.Drawing.Size(105, 43);
+            this.productDelete.TabIndex = 2;
+            this.productDelete.Text = "Delete";
+            this.productDelete.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -182,7 +212,6 @@
             this.label1.Size = new System.Drawing.Size(48, 21);
             this.label1.TabIndex = 13;
             this.label1.Text = "Parts";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -194,37 +223,7 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Products";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 65);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(344, 222);
-            this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(21, 65);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(344, 222);
-            this.tableLayoutPanel2.TabIndex = 11;
-            // 
-            // Form1
+            // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -236,7 +235,7 @@
             this.Controls.Add(this.button9);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "MainScreen";
             this.Text = "Inventory Management System";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -250,8 +249,8 @@
         #endregion
 
         private System.Windows.Forms.Button partAdd;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button partModify;
+        private System.Windows.Forms.Button partDelete;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox textBox1;
@@ -259,9 +258,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button productAdd;
+        private System.Windows.Forms.Button productModify;
+        private System.Windows.Forms.Button productDelete;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;

@@ -17,14 +17,6 @@ namespace InventoryApp
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void partAdd_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Add in the Parts section was clicked");
-        }
+        private void partAdd_Click(object sender, EventArgs e) => MessageBox.Show("Add in the Parts section was clicked");
     }
 }
