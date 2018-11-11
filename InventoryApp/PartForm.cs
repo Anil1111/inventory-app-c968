@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InventoryApp
 {
-    public partial class AddPart : Form
+    public partial class PartForm : Form
     {
-        public AddPart()
+        public PartForm()
         {
             InitializeComponent();
         }

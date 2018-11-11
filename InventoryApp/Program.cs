@@ -16,7 +16,7 @@ namespace InventoryApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddPart());
+            Application.Run(new MainScreen());
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace InventoryApp
 {
-    partial class AddPart
+    partial class PartForm
     {
         /// <summary>
         /// Required designer variable.
