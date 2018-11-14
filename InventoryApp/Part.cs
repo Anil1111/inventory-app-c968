@@ -9,10 +9,19 @@ namespace InventoryApp
     class Part
     {
         public int PartID { get; set; }
-        public double Price { get; set; }
         public string Name { get; set; }
+        public double Price { get; set; }
         public int InStock { get; set; }
         public int Min { get; set; }
         public int Max { get; set; }
+
+        public Part(string name, double price, int inStock, int min, int max)
+        {
+            Name = name;
+            Price = price;
+            InStock = inStock;
+            Min = min;
+            Max = max;
+        }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainExit = new System.Windows.Forms.Button();
             this.partsSearchText = new System.Windows.Forms.TextBox();
             this.partsSearch = new System.Windows.Forms.Button();
@@ -68,6 +68,7 @@
             this.mainExit.TabIndex = 8;
             this.mainExit.Text = "Exit";
             this.mainExit.UseVisualStyleBackColor = true;
+            this.mainExit.Click += new System.EventHandler(this.mainExit_Click);
             // 
             // partsSearchText
             // 
@@ -109,14 +110,14 @@
             this.mainParts.AllowUserToResizeColumns = false;
             this.mainParts.AllowUserToResizeRows = false;
             this.mainParts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mainParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.mainParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.mainParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.partId,
@@ -170,6 +171,7 @@
             this.partsAdd.TabIndex = 0;
             this.partsAdd.Text = "Add";
             this.partsAdd.UseVisualStyleBackColor = true;
+            this.partsAdd.Click += new System.EventHandler(this.partsAdd_Click);
             // 
             // partsDelete
             // 
@@ -190,6 +192,7 @@
             this.partsModify.TabIndex = 1;
             this.partsModify.Text = "Modify";
             this.partsModify.UseVisualStyleBackColor = true;
+            this.partsModify.Click += new System.EventHandler(this.partsModify_Click);
             // 
             // productsControls
             // 
@@ -213,14 +216,14 @@
             this.mainProducts.AllowUserToResizeColumns = false;
             this.mainProducts.AllowUserToResizeRows = false;
             this.mainProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mainProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.mainProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.mainProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -292,6 +295,7 @@
             this.addProduct.TabIndex = 0;
             this.addProduct.Text = "Add";
             this.addProduct.UseVisualStyleBackColor = true;
+            this.addProduct.Click += new System.EventHandler(this.addProduct_Click);
             // 
             // deleteProduct
             // 
@@ -312,6 +316,7 @@
             this.modifyProduct.TabIndex = 1;
             this.modifyProduct.Text = "Modify";
             this.modifyProduct.UseVisualStyleBackColor = true;
+            this.modifyProduct.Click += new System.EventHandler(this.modifyProduct_Click);
             // 
             // MainScreen
             // 

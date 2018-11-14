@@ -11,13 +11,13 @@ namespace InventoryApp
         private List<string> products;
         private List<string> allParts;
 
-        public void addProduct(object product)
+        public void AddProduct(object product)
         {
             //add product to products
             return;
         }
 
-        public bool removeProduct(int id)
+        public bool RemoveProduct(int id)
         {
             //remove product by id
             return true;
@@ -28,17 +28,17 @@ namespace InventoryApp
         //    return;
         //}
 
-        public void updateProduct(int id, Product product)
+        public void UpdateProduct(int id, Product product)
         {
             return;
         }
 
-        public void addPart(Part part)
+        public static void AddPart(Part part)
         {
             return;
         }
 
-        public bool deletePart(Part part)
+        public bool DeletePart(Part part)
         {
             return true;
         }
@@ -48,7 +48,7 @@ namespace InventoryApp
         //    return;
         //}
 
-        public void updatePart(int id, Part part)
+        public void UpdatePart(int id, Part part)
         {
             return;
         }

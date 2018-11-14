@@ -19,25 +19,36 @@ namespace InventoryApp
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            PopulateData();
         }
 
-        private void PopulateData()
+        private void partsAdd_Click(object sender, EventArgs e)
         {
-            // PrePopulate some dummy data for testing
-            string[] partRow0 = { "1", "Part 1", "16", "$12.00" };
-            string[] partRow1 = { "2", "Part 2", "2", "$120.00" };
-            string[] partRow2 = { "3", "Part 3", "1", "$1121542.00" };
-            mainParts.Rows.Add(partRow0);
-            mainParts.Rows.Add(partRow1);
-            mainParts.Rows.Add(partRow2);
+            PartForm newPart = new PartForm();
+            newPart.ShowDialog();
+        }
 
-            string[] productRow0 = { "1", "Product 1", "16", "$12.00" };
-            string[] productRow1 = { "2", "Product 2", "2", "$120.00" };
-            string[] productRow2 = { "3", "Product 3", "1", "$1121542.00" };
-            mainProducts.Rows.Add(productRow0);
-            mainProducts.Rows.Add(productRow1);
-            mainProducts.Rows.Add(productRow2);
+        private void mainExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void partsModify_Click(object sender, EventArgs e)
+        {
+            PartForm modifyPart = new PartForm();
+            modifyPart.partGroupBox.Text = "Modify Part";
+            modifyPart.ShowDialog();
+        }
+
+        private void addProduct_Click(object sender, EventArgs e)
+        {
+            ProductForm newProduct = new ProductForm();
+            newProduct.ShowDialog();
+        }
+
+        private void modifyProduct_Click(object sender, EventArgs e)
+        {
+            ProductForm modifyProduct = new ProductForm();
+            modifyProduct.ShowDialog();
         }
     }
 }
