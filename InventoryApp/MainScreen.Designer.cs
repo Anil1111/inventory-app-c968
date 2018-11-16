@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainExit = new System.Windows.Forms.Button();
             this.partsSearchText = new System.Windows.Forms.TextBox();
             this.partsSearch = new System.Windows.Forms.Button();
             this.partsControls = new System.Windows.Forms.GroupBox();
             this.mainParts = new System.Windows.Forms.DataGridView();
-            this.partId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inventoryLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partsAdd = new System.Windows.Forms.Button();
             this.partsDelete = new System.Windows.Forms.Button();
             this.partsModify = new System.Windows.Forms.Button();
@@ -53,10 +50,14 @@
             this.addProduct = new System.Windows.Forms.Button();
             this.deleteProduct = new System.Windows.Forms.Button();
             this.modifyProduct = new System.Windows.Forms.Button();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.partsControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainParts)).BeginInit();
             this.productsControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainExit
@@ -109,21 +110,18 @@
             // 
             this.mainParts.AllowUserToResizeColumns = false;
             this.mainParts.AllowUserToResizeRows = false;
+            this.mainParts.AutoGenerateColumns = false;
             this.mainParts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mainParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.mainParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.mainParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.mainParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.partId,
-            this.partName,
-            this.inventoryLevel,
-            this.priceCost});
+            this.mainParts.DataSource = Inventory.;
             this.mainParts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.mainParts.Location = new System.Drawing.Point(19, 98);
             this.mainParts.MultiSelect = false;
@@ -133,34 +131,6 @@
             this.mainParts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mainParts.Size = new System.Drawing.Size(447, 238);
             this.mainParts.TabIndex = 10;
-            // 
-            // partId
-            // 
-            this.partId.HeaderText = "Part ID";
-            this.partId.Name = "partId";
-            this.partId.ReadOnly = true;
-            this.partId.Width = 67;
-            // 
-            // partName
-            // 
-            this.partName.HeaderText = "Part Name";
-            this.partName.Name = "partName";
-            this.partName.ReadOnly = true;
-            this.partName.Width = 88;
-            // 
-            // inventoryLevel
-            // 
-            this.inventoryLevel.HeaderText = "Inventory Level";
-            this.inventoryLevel.Name = "inventoryLevel";
-            this.inventoryLevel.ReadOnly = true;
-            this.inventoryLevel.Width = 112;
-            // 
-            // priceCost
-            // 
-            this.priceCost.HeaderText = "Price / Cost per Unit";
-            this.priceCost.Name = "priceCost";
-            this.priceCost.ReadOnly = true;
-            this.priceCost.Width = 138;
             // 
             // partsAdd
             // 
@@ -216,14 +186,14 @@
             this.mainProducts.AllowUserToResizeColumns = false;
             this.mainProducts.AllowUserToResizeRows = false;
             this.mainProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mainProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.mainProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.mainProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -318,6 +288,14 @@
             this.modifyProduct.UseVisualStyleBackColor = true;
             this.modifyProduct.Click += new System.EventHandler(this.modifyProduct_Click);
             // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataSource = typeof(InventoryApp.Inventory);
+            // 
+            // inventoryBindingSource1
+            // 
+            this.inventoryBindingSource1.DataSource = typeof(InventoryApp.Inventory);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -337,6 +315,8 @@
             this.productsControls.ResumeLayout(false);
             this.productsControls.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,10 +330,6 @@
         private System.Windows.Forms.Button partsDelete;
         private System.Windows.Forms.Button partsModify;
         private System.Windows.Forms.DataGridView mainParts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn partId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn partName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn inventoryLevel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceCost;
         private System.Windows.Forms.GroupBox productsControls;
         private System.Windows.Forms.DataGridView mainProducts;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -365,6 +341,8 @@
         private System.Windows.Forms.Button addProduct;
         private System.Windows.Forms.Button deleteProduct;
         private System.Windows.Forms.Button modifyProduct;
+        private System.Windows.Forms.BindingSource inventoryBindingSource;
+        private System.Windows.Forms.BindingSource inventoryBindingSource1;
     }
 }
 

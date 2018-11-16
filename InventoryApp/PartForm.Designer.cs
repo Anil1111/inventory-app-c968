@@ -43,7 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.partNameText = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.partIdText = new System.Windows.Forms.TextBox();
+            this.partIDText = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.partMachineIdLabel = new System.Windows.Forms.Label();
@@ -115,7 +115,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.partNameText);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.partIdText);
+            this.panel1.Controls.Add(this.partIDText);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.partMachineIdLabel);
@@ -207,13 +207,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Price/Cost";
             // 
-            // partIdText
+            // partIDText
             // 
-            this.partIdText.Enabled = false;
-            this.partIdText.Location = new System.Drawing.Point(140, 35);
-            this.partIdText.Name = "partIdText";
-            this.partIdText.Size = new System.Drawing.Size(100, 23);
-            this.partIdText.TabIndex = 3;
+            this.partIDText.Location = new System.Drawing.Point(140, 35);
+            this.partIDText.Name = "partIDText";
+            this.partIDText.Size = new System.Drawing.Size(100, 23);
+            this.partIDText.TabIndex = 3;
             // 
             // label5
             // 
@@ -326,7 +325,7 @@
         private System.Windows.Forms.TextBox partPriceText;
         private System.Windows.Forms.TextBox partInvText;
         private System.Windows.Forms.TextBox partNameText;
-        private System.Windows.Forms.TextBox partIdText;
+        private System.Windows.Forms.TextBox partIDText;
         private System.Windows.Forms.Panel panel2;
     }
 }

@@ -15,8 +15,9 @@ namespace InventoryApp
         public int Min { get; set; }
         public int Max { get; set; }
 
-        public Part(string name, double price, int inStock, int min, int max)
+        public Part(int partID, string name, double price, int inStock, int min, int max)
         {
+            PartID = partID;
             Name = name;
             Price = price;
             InStock = inStock;

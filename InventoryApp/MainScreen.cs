@@ -15,6 +15,7 @@ namespace InventoryApp
         public MainScreen()
         {
             InitializeComponent();
+            Inventory inv = new Inventory();
         }
 
         private void MainScreen_Load(object sender, EventArgs e)

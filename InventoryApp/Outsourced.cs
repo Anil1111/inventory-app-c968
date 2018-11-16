@@ -10,8 +10,8 @@ namespace InventoryApp
     {
         public string CompanyName { get; set; }
 
-        public Outsourced(string name, double price, int inStock, int min, int max, string companyName)
-            : base (name, price, inStock, min, max)
+        public Outsourced(int partID, string name, double price, int inStock, int min, int max, string companyName)
+            : base (partID, name, price, inStock, min, max)
         {
             CompanyName = companyName;
         }

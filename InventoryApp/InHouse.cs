@@ -10,8 +10,8 @@ namespace InventoryApp
     {
         public int MachineID { get; set; }
 
-        public InHouse(string name, double price, int inStock, int min, int max, int machineID)
-            : base(name, price, inStock, min, max)
+        public InHouse(int partID, string name, double price, int inStock, int min, int max, int machineID)
+            : base(partID, name, price, inStock, min, max)
         {
             MachineID = machineID;
         }

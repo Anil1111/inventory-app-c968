@@ -13,6 +13,7 @@ namespace InventoryApp
     public partial class PartForm : Form
     {
         private ErrorProvider errorProvider;
+        private int errorCount;
 
         public PartForm()
         {
@@ -38,7 +39,7 @@ namespace InventoryApp
 
         private void partPriceText_Validated(object sender, EventArgs e)
         {
-            ValidateDoubleBox(partInvText, "This field is required, and only accepts a decimal (1.00)");
+            ValidateDoubleBox(partPriceText, "This field is required, and only accepts a decimal (1.00)");
         }
 
         private void partOutsourced_CheckedChanged(object sender, EventArgs e)
@@ -59,37 +60,38 @@ namespace InventoryApp
 
         private void partSave_Click(object sender, EventArgs e)
         {
-            if ()
+            Part partToSave;
+            int partID = Int32.Parse(this.partIDText.Text);
+            double price = Double.Parse(this.partPriceText.Text);
+            int inStock = Int32.Parse(this.partInvText.Text);
+            int min = Int32.Parse(this.partMinText.Text);
+            int max = Int32.Parse(this.partMaxText.Text);
+
+            if (this.partInHouse.Checked)
             {
-                Part partToSave;
-                double price = Double.Parse(this.partPriceText.Text);
-                int inStock = Int32.Parse(this.partInvText.Text);
-                int min = Int32.Parse(this.partMinText.Text);
-                int max = Int32.Parse(this.partMaxText.Text);
+                int machineID = Int32.Parse(this.partMachineIdText.Text);
 
-                if (this.partInHouse.Checked)
-                {
-                    int machineID = Int32.Parse(this.partMachineIdText.Text);
-
-                    partToSave = new InHouse(this.partNameText.Text, price, inStock, min, max, machineID);
-                }
-                else
-                {
-                    partToSave = new Outsourced(this.partNameText.Text, price, inStock, min, max, this.partCompanyNameText.Text);
-                }
-
-                Inventory.AddPart(partToSave);
+                partToSave = new InHouse(partID, this.partNameText.Text, price, inStock, min, max, machineID);
             }
+            else
+            {
+                partToSave = new Outsourced(partID, this.partNameText.Text, price, inStock, min, max, this.partCompanyNameText.Text);
+            }
+
+            Inventory inv = new Inventory();
+            inv.AddPart(partToSave);
         }
 
         private void ValidateTextBox(Control control, string error)
         {
             if (control.Text == String.Empty)
             {
+                this.errorCount++;
                 DisplayError(control, error);
             }
             else
             {
+                this.errorCount--;
                 ResetError(control);
             }
         }
@@ -98,10 +100,12 @@ namespace InventoryApp
         {
             if ( control.Text == String.Empty || !Int32.TryParse(control.Text, out int result))
             {
+                this.errorCount++;
                 DisplayError(control, error);                
             }
             else
             {
+                this.errorCount--;
                 ResetError(control);
             }
         }
@@ -110,10 +114,12 @@ namespace InventoryApp
         {
             if (control.Text == String.Empty || !Double.TryParse(control.Text, out double result))
             {
+                this.errorCount++;
                 DisplayError(control, error);
             }
             else
             {
+                this.errorCount--;
                 ResetError(control);
             }
         }
@@ -128,6 +134,15 @@ namespace InventoryApp
         {
             errorProvider.SetError(control, String.Empty);
             control.BackColor = SystemColors.Window;
+        }
+
+        private bool ValidateForm()
+        {
+            ValidateTextBox(partNameText, "This field is required");
+            ValidateIntBox(partInvText, "This field is required, and only accepts numbers");
+            ValidateDoubleBox(partInvText, "This field is required, and only accepts a decimal (1.00)");
+
+            return this.errorCount == 0;
         }
     }
 }

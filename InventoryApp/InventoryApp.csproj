@@ -89,6 +89,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\InHouse.datasource" />
+    <None Include="Properties\DataSources\Inventory.datasource" />
+    <None Include="Properties\DataSources\InventoryApp.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\InventoryApp.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\MainScreen.datasource" />
+    <None Include="Properties\DataSources\Outsourced.datasource" />
+    <None Include="Properties\DataSources\Part.datasource" />
+    <None Include="Properties\DataSources\PartForm.datasource" />
+    <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\DataSources\ProductForm.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

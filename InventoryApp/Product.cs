@@ -8,7 +8,7 @@ namespace InventoryApp
 {
     class Product
     {
-        private List<Part> associatedParts;
+        private List<Part> associatedParts = new List<Part>();
 
         public int ProductID { get; set; }
         public string Name { get; set; }

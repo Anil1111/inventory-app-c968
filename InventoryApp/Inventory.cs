@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace InventoryApp
 {
     class Inventory
     {
-        private List<string> products;
-        private List<string> allParts;
+        public static List<Product> products = new List<Product>();
+        public static BindingList<Part> allParts = new BindingList<Part>();
+        public BindingSource source = new BindingSource(allParts, null);
 
         public void AddProduct(object product)
         {
@@ -33,9 +36,10 @@ namespace InventoryApp
             return;
         }
 
-        public static void AddPart(Part part)
+        public void AddPart(Part part)
         {
-            return;
+            allParts.Add(part);
+            
         }
 
         public bool DeletePart(Part part)
