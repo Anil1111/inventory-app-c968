@@ -21,11 +21,6 @@ namespace InventoryApp
             this.errorProvider = new ErrorProvider();
         }
 
-        private void partCancel_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         // Validation
         private void partNameText_Validated(object sender, EventArgs e)
         {

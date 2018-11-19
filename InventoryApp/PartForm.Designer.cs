@@ -268,7 +268,6 @@
             this.partCancel.TabIndex = 11;
             this.partCancel.Text = "Cancel";
             this.partCancel.UseVisualStyleBackColor = true;
-            this.partCancel.Click += new System.EventHandler(this.partCancel_Click);
             // 
             // partSave
             // 

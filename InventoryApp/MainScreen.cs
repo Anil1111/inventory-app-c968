@@ -15,7 +15,10 @@ namespace InventoryApp
         public MainScreen()
         {
             InitializeComponent();
-            Inventory inv = new Inventory();
+
+            Inventory.AllParts.Add(new InHouse(1, "asdf", 1.00, 1, 1, 4, 1123));
+            Inventory.AllParts.Add(new InHouse(2, "asdf", 1.01, 1, 1, 4, 1124));
+            Inventory.AllParts.Add(new InHouse(3, "asdf", 1.02, 1, 1, 4, 1125));
         }
 
         private void MainScreen_Load(object sender, EventArgs e)

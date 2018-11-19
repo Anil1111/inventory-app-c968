@@ -10,9 +10,9 @@ namespace InventoryApp
 {
     class Inventory
     {
-        public static List<Product> products = new List<Product>();
-        public static BindingList<Part> allParts = new BindingList<Part>();
-        public BindingSource source = new BindingSource(allParts, null);
+        public static BindingList<Product> products = new BindingList<Product>();
+        public static BindingList<Part> AllParts { get => AllParts; set { AllParts = value; } }
+
 
         public void AddProduct(object product)
         {
@@ -38,8 +38,7 @@ namespace InventoryApp
 
         public void AddPart(Part part)
         {
-            allParts.Add(part);
-            
+            AllParts.Add(part);
         }
 
         public bool DeletePart(Part part)
