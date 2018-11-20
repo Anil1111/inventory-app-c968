@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainExit = new System.Windows.Forms.Button();
             this.partsSearchText = new System.Windows.Forms.TextBox();
             this.partsSearch = new System.Windows.Forms.Button();
             this.partsControls = new System.Windows.Forms.GroupBox();
+            this.mainParts = new System.Windows.Forms.DataGridView();
             this.partsAdd = new System.Windows.Forms.Button();
             this.partsDelete = new System.Windows.Forms.Button();
             this.partsModify = new System.Windows.Forms.Button();
@@ -44,13 +44,10 @@
             this.addProduct = new System.Windows.Forms.Button();
             this.deleteProduct = new System.Windows.Forms.Button();
             this.modifyProduct = new System.Windows.Forms.Button();
-            this.mainParts = new System.Windows.Forms.DataGridView();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.partsControls.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mainParts)).BeginInit();
             this.productsControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainParts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mainExit
@@ -98,6 +95,19 @@
             this.partsControls.TabIndex = 15;
             this.partsControls.TabStop = false;
             this.partsControls.Text = "Parts";
+            // 
+            // mainParts
+            // 
+            this.mainParts.AllowUserToAddRows = false;
+            this.mainParts.AllowUserToDeleteRows = false;
+            this.mainParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mainParts.Location = new System.Drawing.Point(19, 65);
+            this.mainParts.Name = "mainParts";
+            this.mainParts.ReadOnly = true;
+            this.mainParts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.mainParts.Size = new System.Drawing.Size(445, 271);
+            this.mainParts.TabIndex = 10;
+            this.mainParts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainParts_CellContentClick);
             // 
             // partsAdd
             // 
@@ -153,14 +163,14 @@
             this.mainProducts.AllowUserToResizeColumns = false;
             this.mainProducts.AllowUserToResizeRows = false;
             this.mainProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.mainProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.mainProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.mainProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainProducts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.mainProducts.Location = new System.Drawing.Point(19, 64);
@@ -222,20 +232,6 @@
             this.modifyProduct.UseVisualStyleBackColor = true;
             this.modifyProduct.Click += new System.EventHandler(this.modifyProduct_Click);
             // 
-            // mainParts
-            // 
-            this.mainParts.AutoGenerateColumns = false;
-            this.mainParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.mainParts.DataSource = Inventory.AllParts;
-            this.mainParts.Location = new System.Drawing.Point(19, 65);
-            this.mainParts.Name = "mainParts";
-            this.mainParts.Size = new System.Drawing.Size(445, 271);
-            this.mainParts.TabIndex = 10;
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataSource = typeof(InventoryApp.Inventory);
-            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -251,11 +247,10 @@
             this.Load += new System.EventHandler(this.MainScreen_Load);
             this.partsControls.ResumeLayout(false);
             this.partsControls.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mainParts)).EndInit();
             this.productsControls.ResumeLayout(false);
             this.productsControls.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainParts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,7 +271,6 @@
         private System.Windows.Forms.Button deleteProduct;
         private System.Windows.Forms.Button modifyProduct;
         private System.Windows.Forms.DataGridView mainParts;
-        private System.Windows.Forms.BindingSource inventoryBindingSource;
     }
 }
 

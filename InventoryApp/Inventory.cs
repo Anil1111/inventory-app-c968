@@ -11,7 +11,7 @@ namespace InventoryApp
     class Inventory
     {
         public static BindingList<Product> products = new BindingList<Product>();
-        public static BindingList<Part> AllParts { get => AllParts; set { AllParts = value; } }
+        public static BindingList<Part> allParts = new BindingList<Part>();
 
 
         public void AddProduct(object product)
@@ -36,9 +36,9 @@ namespace InventoryApp
             return;
         }
 
-        public void AddPart(Part part)
+        public static void AddPart(Part part)
         {
-            AllParts.Add(part);
+            allParts.Add(part);
         }
 
         public bool DeletePart(Part part)

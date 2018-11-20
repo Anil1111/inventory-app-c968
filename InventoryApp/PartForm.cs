@@ -73,8 +73,7 @@ namespace InventoryApp
                 partToSave = new Outsourced(partID, this.partNameText.Text, price, inStock, min, max, this.partCompanyNameText.Text);
             }
 
-            Inventory inv = new Inventory();
-            inv.AddPart(partToSave);
+            Inventory.AddPart(partToSave);
         }
 
         private void ValidateTextBox(Control control, string error)

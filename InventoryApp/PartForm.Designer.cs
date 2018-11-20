@@ -316,15 +316,15 @@
         private System.Windows.Forms.Button partCancel;
         private System.Windows.Forms.Button partSave;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox partCompanyNameText;
+        public System.Windows.Forms.TextBox partCompanyNameText;
         private System.Windows.Forms.Label partCompanyNameLabel;
-        private System.Windows.Forms.TextBox partMachineIdText;
-        private System.Windows.Forms.TextBox partMinText;
-        private System.Windows.Forms.TextBox partMaxText;
-        private System.Windows.Forms.TextBox partPriceText;
-        private System.Windows.Forms.TextBox partInvText;
-        private System.Windows.Forms.TextBox partNameText;
-        private System.Windows.Forms.TextBox partIDText;
+        public System.Windows.Forms.TextBox partMachineIdText;
+        public System.Windows.Forms.TextBox partMinText;
+        public System.Windows.Forms.TextBox partMaxText;
+        public System.Windows.Forms.TextBox partPriceText;
+        public System.Windows.Forms.TextBox partInvText;
+        public System.Windows.Forms.TextBox partNameText;
+        public System.Windows.Forms.TextBox partIDText;
         private System.Windows.Forms.Panel panel2;
     }
 }
