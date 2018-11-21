@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InventoryApp
 {
-    abstract class Part
+    public abstract class Part
     {
         public int PartID { get; set; }
         public string Name { get; set; }
@@ -24,5 +24,7 @@ namespace InventoryApp
             Min = min;
             Max = max;
         }
+
+        abstract public string GetMagicVar();
     }
 }

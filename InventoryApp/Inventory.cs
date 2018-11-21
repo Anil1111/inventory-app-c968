@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace InventoryApp
 {
-    class Inventory
+    public class Inventory
     {
         public static BindingList<Product> products = new BindingList<Product>();
         public static BindingList<Part> allParts = new BindingList<Part>();

@@ -38,7 +38,7 @@ namespace InventoryApp
 
         private void partsModify_Click(object sender, EventArgs e)
         {
-            var rowData = Inventory.allParts[mainParts.SelectedRows[0].Index];
+            Part rowData = Inventory.allParts[mainParts.SelectedRows[0].Index];
             PartForm modifyPart = new PartForm();
             modifyPart.partIDText.Text = rowData.PartID.ToString();
             modifyPart.partNameText.Text = rowData.Name.ToString();
@@ -47,10 +47,8 @@ namespace InventoryApp
             modifyPart.partMaxText.Text = rowData.Max.ToString();
             modifyPart.partMinText.Text = rowData.Min.ToString();
             //InHouse or Outsourced
-            if ( !String.IsNullOrEmpty(rowData.MachineID.ToString()) )
-            {
-                modifyPart.partMachineIdText.Text = rowData.MachineID.ToString();
-            }
+            modifyPart.partMachineIdText.Text = rowData.GetMagicVar();
+
             modifyPart.partGroupBox.Text = "Modify Part";
             modifyPart.ShowDialog();
 

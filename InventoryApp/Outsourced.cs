@@ -15,5 +15,10 @@ namespace InventoryApp
         {
             CompanyName = companyName;
         }
+
+        public override string GetMagicVar()
+        {
+            return CompanyName;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InventoryApp
 {
-    class Product
+    public class Product
     {
         private List<Part> associatedParts = new List<Part>();
 

@@ -15,5 +15,10 @@ namespace InventoryApp
         {
             MachineID = machineID;
         }
+
+        public override string GetMagicVar()
+        {
+            return MachineID.ToString();
+        }
     }
 }
