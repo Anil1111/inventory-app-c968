@@ -19,6 +19,15 @@ namespace InventoryApp
             Inventory.AddPart(new InHouse(2, "asdf", 1.01, 1, 1, 4, 1124));
             Inventory.AddPart(new InHouse(3, "asdf", 1.02, 1, 1, 4, 1125));
             mainParts.DataSource = Inventory.allParts;
+            mainParts.Columns["Max"].Visible = false;
+            mainParts.Columns["Min"].Visible = false;
+            mainParts.Columns["Price"].DisplayIndex = 3;
+            mainParts.Columns["Price"].HeaderCell.Value = "Price/Cost per Unit";
+            mainParts.Columns["PartID"].HeaderCell.Value = "Part ID";
+            mainParts.Columns["InStock"].HeaderCell.Value = "Inventory Level";
+            mainParts.Columns["Name"].HeaderCell.Value = "Part Name";
+            mainParts.RowHeadersVisible = false;
+            mainParts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
